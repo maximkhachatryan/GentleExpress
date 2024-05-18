@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GentleExpress.Common.EfCore\GentleExpress.Common.EfCore.csproj" />
+    <ProjectReference Include="..\GentleExpress.Repositories.Abstraction\GentleExpress.Repositories.Abstraction.csproj" />
+  </ItemGroup>
+
 </Project>

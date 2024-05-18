@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GentleExpress.Repositories.EfCore\GentleExpress.Repositories.EfCore.csproj" />
+    <ProjectReference Include="..\GentleExpress.Services.Abstraction\GentleExpress.Services.Abstraction.csproj" />
+  </ItemGroup>
+
 </Project>
