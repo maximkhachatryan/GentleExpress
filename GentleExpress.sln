@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GentleExpress.API", "GentleExpress.API\GentleExpress.API.csproj", "{78A7C7B6-5D64-4D5C-8AD2-B616D2269C1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GentleExpress.Models", "GentleExpress.Models\GentleExpress.Models.csproj", "{5F741AFF-F5F2-4B35-B8AC-0B5596BC9E48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{78A7C7B6-5D64-4D5C-8AD2-B616D2269C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78A7C7B6-5D64-4D5C-8AD2-B616D2269C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78A7C7B6-5D64-4D5C-8AD2-B616D2269C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F741AFF-F5F2-4B35-B8AC-0B5596BC9E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F741AFF-F5F2-4B35-B8AC-0B5596BC9E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F741AFF-F5F2-4B35-B8AC-0B5596BC9E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F741AFF-F5F2-4B35-B8AC-0B5596BC9E48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
