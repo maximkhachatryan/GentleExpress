@@ -22,8 +22,4 @@ public class GentleExpressPostgresDbContext : GentleExpressBaseDbContext
     public DbSet<Courier> Couriers { get; set; }
     public DbSet<District> Districts { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseNpgsql();
-    }
 }
