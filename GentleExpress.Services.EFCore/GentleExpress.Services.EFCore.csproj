@@ -11,4 +11,8 @@
     <ProjectReference Include="..\GentleExpress.Services.Abstraction\GentleExpress.Services.Abstraction.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

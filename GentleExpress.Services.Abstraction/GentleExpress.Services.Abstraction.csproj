@@ -10,4 +10,8 @@
     <ProjectReference Include="..\GentleExpress.Repositories.Abstraction\GentleExpress.Repositories.Abstraction.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
