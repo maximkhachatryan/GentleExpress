@@ -17,8 +17,7 @@ builder.Services.AddDbContext<GentleExpressPostgresDbContext>(opt =>
 builder.Services.AddScoped<ICouriersService, CouriersService>();
 builder.Services.AddScoped<ICitiesService, CitiesService>();
 builder.Services.AddScoped<IDistrictsService, DistrictsService>();
-
-
+builder.Services.AddScoped<IVendorsService, VendorsService>();
 
 var app = builder.Build();
 
