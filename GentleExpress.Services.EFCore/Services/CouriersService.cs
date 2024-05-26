@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GentleExpress.Services.EFCore.Services;
 
-public class CourierService(GentleExpressPostgresDbContext context)
-    : ICourierService
+public class CouriersService(GentleExpressPostgresDbContext context)
+    : ICouriersService
 {
     public Task<List<CourierDTO>> GetCouriers()
     {
