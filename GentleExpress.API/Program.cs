@@ -1,4 +1,6 @@
 using GentleExpress.Repositories.EfCore;
+using GentleExpress.Services.Abstraction.Services;
+using GentleExpress.Services.EFCore.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<GentleExpressPostgresDbContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("GentleExpressDbConnection")));
+builder.Services.AddScoped<ICourierService, CourierService>();
+
 
 var app = builder.Build();
 

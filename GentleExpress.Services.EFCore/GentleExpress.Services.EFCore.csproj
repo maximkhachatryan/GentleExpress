@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GentleExpress.Models\GentleExpress.Models.csproj" />
     <ProjectReference Include="..\GentleExpress.Repositories.EfCore\GentleExpress.Repositories.EfCore.csproj" />
     <ProjectReference Include="..\GentleExpress.Services.Abstraction\GentleExpress.Services.Abstraction.csproj" />
   </ItemGroup>

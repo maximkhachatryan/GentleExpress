@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GentleExpress.Models\GentleExpress.Models.csproj" />
     <ProjectReference Include="..\GentleExpress.Services.EFCore\GentleExpress.Services.EFCore.csproj" />
   </ItemGroup>
 
