@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GentleExpress.Repositories.Abstraction.Entities;
 
-public class ClientUser
+public class VendorUser
 {
     public int Id { get; set; }
     public string FirstName { get; set; } = null!;
@@ -14,6 +14,6 @@ public class ClientUser
     public string UserName { get; set; } = null!;
     public string Password { get; set; } = null!;
 
-    public int ClientId { get; set; }
-    public Client Client { get; set; } = null!;
+    public int VendorId { get; set; }
+    public Vendor Vendor { get; set; } = null!;
 }
