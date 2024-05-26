@@ -16,6 +16,8 @@ builder.Services.AddDbContext<GentleExpressPostgresDbContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("GentleExpressDbConnection")));
 builder.Services.AddScoped<ICouriersService, CouriersService>();
 builder.Services.AddScoped<ICitiesService, CitiesService>();
+builder.Services.AddScoped<IDistrictsService, DistrictsService>();
+
 
 
 var app = builder.Build();
