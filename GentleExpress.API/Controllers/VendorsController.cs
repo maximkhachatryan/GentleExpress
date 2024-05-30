@@ -12,4 +12,12 @@ public class VendorsController(IVendorsService vendorsService) : ControllerBase
 
     [HttpGet]
     public Task<List<VendorDTO>> Get() => vendorsService.GetVendors();
+
+    [HttpPost]
+    public Task<VendorDTO> CreateVendor(CreateVendorRequest request)
+        => vendorsService.CreateVendor(request);
+
+    [HttpPut]
+    public Task<VendorDTO> UpdateVendor(UpdateVendorRequest request)
+        => vendorsService.UpdateVendor(request);
 }
