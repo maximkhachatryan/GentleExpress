@@ -17,7 +17,9 @@ public class VendorsService(GentleExpressPostgresDbContext context)
             Name = request.Name,
             BrandName = request.BrandName,
             PhoneNumber1 = request.PhoneNumber1,
-            PhoneNumber2 = request.PhoneNumber2
+            PhoneNumber2 = request.PhoneNumber2,
+            UserName = request.UserName,
+            Password = request.Password
         });
 
         await context.SaveChangesAsync();
@@ -30,7 +32,8 @@ public class VendorsService(GentleExpressPostgresDbContext context)
             BrandName = vendorEntity.Entity.BrandName,
             PhoneNumber1 = vendorEntity.Entity.PhoneNumber1,
             PhoneNumber2 = vendorEntity.Entity.PhoneNumber2,
-            VendorWalletAmount = vendorEntity.Entity.VendorWalletAmount
+            VendorWalletAmount = vendorEntity.Entity.VendorWalletAmount,
+            UserName = vendorEntity.Entity.UserName
         };
     }
 
@@ -44,7 +47,8 @@ public class VendorsService(GentleExpressPostgresDbContext context)
             BrandName = v.BrandName,
             PhoneNumber1 = v.PhoneNumber1,
             PhoneNumber2 = v.PhoneNumber2,
-            VendorWalletAmount = v.VendorWalletAmount
+            VendorWalletAmount = v.VendorWalletAmount,
+            UserName = v.UserName
         }).ToListAsync();
     }
 
@@ -59,6 +63,7 @@ public class VendorsService(GentleExpressPostgresDbContext context)
         vendor.BrandName = request.BrandName;
         vendor.PhoneNumber1 = request.PhoneNumber1;
         vendor.PhoneNumber2 = request.PhoneNumber2;
+        vendor.UserName = request.UserName;
 
         await context.SaveChangesAsync();
 
@@ -70,7 +75,8 @@ public class VendorsService(GentleExpressPostgresDbContext context)
             BrandName = vendor.BrandName,
             PhoneNumber1 = vendor.PhoneNumber1,
             PhoneNumber2 = vendor.PhoneNumber2,
-            VendorWalletAmount = vendor.VendorWalletAmount
+            VendorWalletAmount = vendor.VendorWalletAmount,
+            UserName = vendor.UserName
         };
     }
 }

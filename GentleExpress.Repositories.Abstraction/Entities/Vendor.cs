@@ -9,5 +9,8 @@ public class Vendor
     public string? PhoneNumber1 { get; set; }
     public string? PhoneNumber2 { get; set; }
     public decimal VendorWalletAmount { get; set; }
+
+    public string UserName { get; set; } = null!;
+    public string Password { get; set; } = null!;
     public ICollection<VendorAddress> Addresses { get; set; } = null!;
 }

@@ -18,7 +18,6 @@ public class GentleExpressPostgresDbContext : GentleExpressBaseDbContext
     public DbSet<City> Cities { get; set; }
     public DbSet<Vendor> Vendors { get; set; }
     public DbSet<VendorAddress> VendorAddresses { get; set; }
-    public DbSet<VendorUser> VendorUsers { get; set; }
     public DbSet<Courier> Couriers { get; set; }
     public DbSet<District> Districts { get; set; }
 

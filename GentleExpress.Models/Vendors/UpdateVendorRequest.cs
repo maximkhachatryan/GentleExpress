@@ -8,4 +8,5 @@ public class UpdateVendorRequest
     public string BrandName { get; set; } = null!;
     public string? PhoneNumber1 { get; set; }
     public string? PhoneNumber2 { get; set; }
+    public string UserName { get; set; } = null!;
 }
