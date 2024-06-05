@@ -11,7 +11,7 @@ public class VendorsService(GentleExpressPostgresDbContext context)
 {
     public async Task<VendorDTO> CreateVendor(CreateVendorRequest request)
     {
-        var vendorEntity = await context.Vendors.AddAsync(new Vendor
+        var vendorEntity = context.Vendors.Add(new Vendor
         {
             Code = request.Code,
             Name = request.Name,
@@ -19,6 +19,8 @@ public class VendorsService(GentleExpressPostgresDbContext context)
             PhoneNumber1 = request.PhoneNumber1,
             PhoneNumber2 = request.PhoneNumber2
         });
+
+        await context.SaveChangesAsync();
 
         return new VendorDTO
         {

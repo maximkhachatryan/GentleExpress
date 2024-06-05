@@ -18,6 +18,8 @@ builder.Services.AddScoped<ICouriersService, CouriersService>();
 builder.Services.AddScoped<ICitiesService, CitiesService>();
 builder.Services.AddScoped<IDistrictsService, DistrictsService>();
 builder.Services.AddScoped<IVendorsService, VendorsService>();
+builder.Services.AddScoped<IVendorAddressesService, VendorAddressesService>();
+
 
 var app = builder.Build();
 
