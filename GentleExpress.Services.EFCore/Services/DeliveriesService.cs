@@ -48,4 +48,22 @@ public class DeliveriesService(GentleExpressPostgresDbContext context) : IDelive
             //TODO
         };
     }
+
+    public async Task FillOrder(int deliveryId, FillOrderRequest request)
+    {
+        var existingOrder = await context.Deliveries.FindAsync(deliveryId);
+        if (existingOrder == null)
+        {
+            throw new Exception($"DeliveryId {deliveryId} not found");
+        }
+
+        existingOrder.ReceiverFillDate = DateTime.Now;
+        existingOrder.ReceiverName = request.ReceiverName;
+        existingOrder.ReceiverDistrictId = request.ReceiverDistrictId;
+        existingOrder.ReceiverAddress = request.ReceiverAddress;
+        existingOrder.ReceiverPhoneNumber = request.ReceiverPhoneNumber;
+        existingOrder.ReceiverNotes = request.ReceiverNotes;
+
+        await context.SaveChangesAsync();
+    }
 }

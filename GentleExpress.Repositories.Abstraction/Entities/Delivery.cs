@@ -4,7 +4,7 @@ public class Delivery
 {
     public int Id { get; set; }
 
-    //Order
+    //Vendor order
     public int DeliveryCode { get; set; }
     public string ParcelDescription { get; set; } = null!;
     public DateTime DesiredPickUpDate { get; set; }
@@ -19,4 +19,14 @@ public class Delivery
     public DateTime CreateDate { get; set; }
 
 
+    //Receiver order
+    public DateTime ReceiverFillDate { get; set; }
+    public string ReceiverName { get; set; } = null!;
+
+    public int ReceiverDistrictId { get; set; }
+    public District ReceiverDistrict { get; set; } = null!;
+
+    public string ReceiverAddress { get; set; } = null!;
+    public string ReceiverPhoneNumber { get; set; } = null!;
+    public string? ReceiverNotes { get; set; }
 }
