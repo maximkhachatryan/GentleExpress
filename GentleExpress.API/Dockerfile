@@ -10,6 +10,12 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["GentleExpress.API/GentleExpress.API.csproj", "GentleExpress.API/"]
+COPY ["GentleExpress.Models/GentleExpress.Models.csproj", "GentleExpress.Models/"]
+COPY ["GentleExpress.Services.EFCore/GentleExpress.Services.EFCore.csproj", "GentleExpress.Services.EFCore/"]
+COPY ["GentleExpress.Repositories.EfCore/GentleExpress.Repositories.EfCore.csproj", "GentleExpress.Repositories.EfCore/"]
+COPY ["GentleExpress.Common.EfCore/GentleExpress.Common.EfCore.csproj", "GentleExpress.Common.EfCore/"]
+COPY ["GentleExpress.Repositories.Abstraction/GentleExpress.Repositories.Abstraction.csproj", "GentleExpress.Repositories.Abstraction/"]
+COPY ["GentleExpress.Services.Abstraction/GentleExpress.Services.Abstraction.csproj", "GentleExpress.Services.Abstraction/"]
 RUN dotnet restore "./GentleExpress.API/GentleExpress.API.csproj"
 COPY . .
 WORKDIR "/src/GentleExpress.API"
