@@ -29,4 +29,14 @@ public class Delivery
     public string ReceiverAddress { get; set; } = null!;
     public string ReceiverPhoneNumber { get; set; } = null!;
     public string? ReceiverNotes { get; set; }
+
+
+    //Admin
+    public DateTime? RejectDate { get; set; }
+    public DateTime? AcceptDate { get; set; }
+    public DateTime? PickUpAssignmentDate { get; set; }
+    public int? PickUpCourierId { get; set; }
+    public Courier? PickUpCourier { get; set; }
+    public DateTime? CargoReceivalDate { get; set; }
+
 }

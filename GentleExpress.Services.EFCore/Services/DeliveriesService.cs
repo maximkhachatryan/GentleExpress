@@ -66,4 +66,35 @@ public class DeliveriesService(GentleExpressPostgresDbContext context) : IDelive
 
         await context.SaveChangesAsync();
     }
+
+    public async Task RejectOrder(int deliveryId)
+    {
+        var existingOrder = await context.Deliveries.FindAsync(deliveryId);
+        if (existingOrder == null)
+        {
+            throw new Exception($"DeliveryId {deliveryId} not found");
+        }
+
+        existingOrder.RejectDate = DateTime.Now;
+
+        await context.SaveChangesAsync();
+    }
+
+    public async Task AcceptOrder(int deliveryId)
+    {
+        var existingOrder = await context.Deliveries.FindAsync(deliveryId);
+        if (existingOrder == null)
+        {
+            throw new Exception($"DeliveryId {deliveryId} not found");
+        }
+
+        existingOrder.AcceptDate = DateTime.Now;
+
+        await context.SaveChangesAsync();
+    }
+
+    public Task AssignPickUpCourier(int deliveryId, int courierId)
+    {
+        throw new NotImplementedException();
+    }
 }
